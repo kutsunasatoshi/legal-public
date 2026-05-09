@@ -23,7 +23,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 <body>
 
 <h1>プライバシーポリシー</h1>
-<div class="meta">最終改定日：2026年5月5日 ／ 制定者：忽那賢志</div>
+<div class="meta">最終改定日：2026年5月9日 ／ 制定者：忽那賢志</div>
 
 <div class="notice">
 忽那賢志（以下「当方」といいます）は、モバイルアプリケーション「くつ王感染症クイックリファレンス」（以下「本サービス」といいます）の利用者（以下「利用者」といいます）の個人情報の取扱いについて、本プライバシーポリシー（以下「本ポリシー」といいます）を定め、関係法令を遵守して適切に取り扱います。
@@ -37,6 +37,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 <tr><td>決済関連情報</td><td>Apple App Store / Google Play 経由</td><td>サブスクリプション加入状況、購入履歴、トライアル状況（個別の決済情報・カード番号は当方では取得しません）</td></tr>
 <tr><td>端末情報</td><td>本サービスのアプリから自動取得</td><td>OS種別、OSバージョン、端末識別子（広告ID）、アプリのバージョン</td></tr>
 <tr><td>利用ログ</td><td>本サービスのアプリ内</td><td>閲覧した章・項目、計算ツール使用履歴、起動回数、利用時間</td></tr>
+<tr><td>アンチバイオグラム画像（v2.0以降）</td><td>利用者がアプリ内で能動的に登録</td><td>勤務先施設のアンチバイオグラム表（PDFまたは写真）。AI解析（OCR・構造化）のため、Cloudflare Workers経由でAnthropic社のClaude Vision APIへ一時的に送信されます。送信される画像には、施設名や菌種・抗菌薬の感受性データが含まれますが、患者個人を特定する情報（氏名、ID、診療情報等）は含まれません。解析後の生画像データは当方および外部APIのいずれにおいても保存されず、解析結果（菌種×抗菌薬の構造化データ）のみが利用者の端末内（ローカルストレージ）に保存されます。</td></tr>
 <tr><td>お問い合わせ情報</td><td>メール・お問い合わせフォーム</td><td>お名前、メールアドレス、お問い合わせ内容</td></tr>
 </tbody>
 </table>
@@ -46,6 +47,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 <ul>
   <li>本サービスの提供および運営</li>
   <li>サブスクリプション加入状況の確認・課金処理</li>
+  <li>自施設アンチバイオグラム機能における画像のOCR解析および菌種×抗菌薬感受性データの構造化（v2.0以降）</li>
   <li>本サービスの改善（バグ修正、新機能開発、UX改善）</li>
   <li>利用者からのお問い合わせへの対応</li>
   <li>本サービスに関する重要なお知らせの配信</li>
@@ -59,7 +61,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
   <li>利用者の同意がある場合</li>
   <li>法令に基づく場合（裁判所、警察等からの正当な要請等）</li>
   <li>人の生命、身体または財産の保護のために必要がある場合で、本人の同意を得ることが困難であるとき</li>
-  <li>本サービスの運営に必要な範囲で、業務委託先（決済プラットフォーム、クラウドサーバー、分析ツール等）に提供する場合（業務委託先には機密保持義務を課します）</li>
+  <li>本サービスの運営に必要な範囲で、業務委託先（決済プラットフォーム、クラウドサーバー、AI解析API、分析ツール等）に提供する場合（業務委託先には機密保持義務を課します）</li>
 </ul>
 
 <h2>4. 利用する外部サービス</h2>
@@ -70,7 +72,9 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 <tr><td>Apple App Store / Google Play Store</td><td>アプリ配信、決済処理</td><td>Apple／Googleの各プライバシーポリシー</td></tr>
 <tr><td>RevenueCat</td><td>サブスクリプション管理</td><td>https://www.revenuecat.com/privacy</td></tr>
 <tr><td>YouTube（埋め込み再生）</td><td>動画コンテンツ表示</td><td>Google プライバシーポリシー</td></tr>
-<tr><td>Cloudflare Pages（ニュースフィード配信）</td><td>ウェブコンテンツ配信</td><td>https://www.cloudflare.com/privacypolicy/</td></tr>
+<tr><td>Cloudflare Pages（コンテンツ配信）</td><td>感染症ニュース・月例レクチャー情報等のウェブコンテンツ配信</td><td>https://www.cloudflare.com/privacypolicy/</td></tr>
+<tr><td>Cloudflare Workers（アンチバイオグラム解析バックエンド）</td><td>アンチバイオグラム画像データの中継・サブスクリプション加入確認</td><td>https://www.cloudflare.com/privacypolicy/</td></tr>
+<tr><td>Anthropic（Claude Vision API）</td><td>アンチバイオグラム画像のOCR・構造化処理（v2.0以降の自施設アンチバイオグラム機能利用時のみ）</td><td>https://www.anthropic.com/legal/privacy</td></tr>
 <tr><td>GitHub Pages（法的文書ホスト）</td><td>静的ページ配信</td><td>https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement</td></tr>
 </tbody>
 </table>
@@ -82,10 +86,10 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 <p>本サービスでは、利用者の利便性向上のため、ローカルストレージ等の類似技術を利用することがあります。これらは利用者を個人的に特定するものではなく、サービス改善および利用状況の把握に利用します。</p>
 
 <h2>7. 安全管理措置</h2>
-<p>当方は、取得した個人情報の漏洩、滅失またはき損の防止その他の個人情報の安全管理のため、合理的な範囲で必要かつ適切な措置を講じます。</p>
+<p>当方は、取得した個人情報の漏洩、滅失またはき損の防止その他の個人情報の安全管理のため、合理的な範囲で必要かつ適切な措置を講じます。アンチバイオグラム機能における画像送信は、すべてHTTPS（TLS）暗号化通信で行われ、外部APIプロバイダ（Anthropic社）との契約に基づき、送信されたデータがAnthropic社のAIモデル学習目的に二次利用されないことを確認しています。</p>
 
 <h2>8. 保有期間</h2>
-<p>取得した個人情報は、利用目的達成に必要な期間または法令で定められた期間保有し、その後速やかに削除します。サブスクリプション解約後の決済関連情報は、税務・会計等の法令上の保存義務期間（原則7年）保管します。</p>
+<p>取得した個人情報は、利用目的達成に必要な期間または法令で定められた期間保有し、その後速やかに削除します。サブスクリプション解約後の決済関連情報は、税務・会計等の法令上の保存義務期間（原則7年）保管します。アンチバイオグラム画像の生データは、解析処理完了後、当方および外部APIプロバイダにおいて保存されません。</p>
 
 <h2>9. 開示・訂正・削除請求</h2>
 <p>利用者は、当方が保有する自己の個人情報について、開示・訂正・追加・削除・利用停止を請求することができます。請求方法は以下のとおりです。</p>
