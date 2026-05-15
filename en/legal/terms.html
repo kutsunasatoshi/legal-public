@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+<title>Terms of Service - ID Quick Reference</title>
+<style>
+:root { --primary: #0d6b6b; --primary-ink: #064545; --primary-soft: #d9ecec; --text: #0e1a1a; --text-muted: #5b6c6f; --border: #d3dadc; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 18px 48px; color: var(--text); line-height: 1.85; font-size: 15px; }
+h1 { font-size: 1.5rem; color: var(--primary-ink); border-bottom: 2px solid var(--primary); padding-bottom: 8px; }
+h2 { font-size: 1.05rem; color: var(--primary-ink); margin: 28px 0 8px; }
+.meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px; }
+.notice { background: var(--primary-soft); border-left: 3px solid var(--primary); padding: 12px 14px; margin: 16px 0; border-radius: 4px; }
+ol { padding-left: 20px; }
+ol li { margin: 6px 0; }
+hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+.contact { background: #f8f9fa; padding: 14px; border-radius: 6px; font-size: 0.9rem; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<h1>ID Quick Reference Terms of Service</h1>
+<div class="meta">Last updated: May 9, 2026 / Publisher: Satoshi Kutsuna</div>
+
+<div class="notice">
+These Terms of Service govern the use of the mobile application "ID Quick Reference" and related services provided by Satoshi Kutsuna ("we," "us," or "our"). Please read these terms carefully before using the service. By using the service, you agree to these terms.
+</div>
+
+<h2>1. Scope</h2>
+<ol>
+  <li>These terms apply to all use of the service.</li>
+  <li>Anyone using the service (“user”) must review and accept these terms before use.</li>
+</ol>
+
+<h2>2. Definitions</h2>
+<ol>
+  <li>"Service" means the ID Quick Reference application, whether distributed on iOS, Android, web, or related platforms, together with associated content and services.</li>
+  <li>“User” means any person who accesses or uses the service.</li>
+  <li>“Subscription” means a recurring paid plan that allows continued access to paid features of the service.</li>
+</ol>
+
+<h2>3. Intended Users</h2>
+<ol>
+  <li>The service is primarily designed for physicians, pharmacists, nurses, and other healthcare professionals.</li>
+  <li>Non-clinicians may access the service, but it is not intended for self-diagnosis, self-treatment, or direct patient decision-making by the general public.</li>
+</ol>
+
+<h2>3.1 Subscriber Feature: Institutional Antibiogram (v2.0)</h2>
+<ol>
+  <li>Users on an active paid subscription may upload an image or PDF of their institution's antibiogram (cumulative susceptibility table) for AI-assisted structured extraction by Anthropic's Claude Vision API.</li>
+  <li>Uploaded image data is transmitted briefly through our backend (Cloudflare Workers) to Anthropic's API for processing. <strong>Uploaded images are not retained on our servers after processing</strong>; Anthropic's handling is governed by its own API usage policies.</li>
+  <li>Structured results (organism, antibiotic, percent susceptible) are stored locally on the user's device (localStorage) only. They are not stored on our servers.</li>
+  <li>The user is responsible for ensuring that uploaded images contain only aggregate institutional susceptibility data and do not contain protected health information (PHI), patient identifiers, staff personal data, or other confidential information. Any third-party rights infringement caused by the user's upload remains the user's responsibility.</li>
+  <li>AI-extracted results may contain recognition errors. Before using results for clinical decisions, the user must verify them against the original antibiogram and correct them using the in-app edit interface as needed.</li>
+  <li>This feature provides supportive reference information for institution-level empirical therapy guidance only. It is not intended for direct prescribing decisions for any specific patient. Final prescribing decisions remain the responsibility of the treating clinician.</li>
+  <li>To prevent abuse, rate limits may apply to the upload/analysis function. Excessive or automated use may be throttled or blocked.</li>
+</ol>
+
+<h2>4. Fees and Subscription Plans</h2>
+<ol>
+  <li>Access to paid features requires an active subscription.</li>
+  <li>Current pricing is shown in the Apple App Store or Google Play Store listing for the relevant region. Indicative pricing for the U.S. market is:
+    <ul>
+      <li>Annual plan: USD 29.99 per year</li>
+      <li>Monthly plan: USD 2.99 per month</li>
+    </ul>
+    Prices in other markets are set in local currency by the platform store and may differ from the indicative U.S. pricing.
+  </li>
+  <li>Both the monthly and annual plans include a 7-day free trial for first-time subscribers. If you cancel during the trial period, you will not be charged.</li>
+  <li>Payments are processed through the Apple App Store or Google Play Store using the payment method associated with the user's Apple ID or Google account.</li>
+  <li>Pricing may change. If pricing changes, notice will be provided in the service or store listing before the change takes effect.</li>
+</ol>
+
+<h2>5. Auto-Renewal and Cancellation</h2>
+<ol>
+  <li>Subscriptions renew automatically for the same billing period unless cancelled at least 24 hours before the current period ends.</li>
+  <li>Renewal charges are applied within 24 hours before the end of the current billing period through the user’s Apple or Google account.</li>
+  <li>Cancellations must be managed by the user through the subscription settings of the relevant app store account. We cannot cancel subscriptions on the user’s behalf.</li>
+  <li>After cancellation, paid access continues until the end of the current billing period.</li>
+</ol>
+
+<h2>6. Refunds</h2>
+<ol>
+  <li>Paid subscription fees are generally non-refundable.</li>
+  <li>No charge is incurred if the subscription is cancelled during the free trial period.</li>
+  <li>Refund requests must be submitted through Apple or Google support. Refunds are governed by the policies of the relevant payment platform.</li>
+</ol>
+
+<h2>7. Medical Disclaimer</h2>
+<ol>
+  <li>The information in the service is intended as educational and reference material for healthcare professionals. It is not presented as a device, diagnostic engine, or individualized medical decision system.</li>
+  <li>The service does not diagnose, recommend treatment for, or manage any specific patient, and it does not replace clinical judgment by a licensed clinician.</li>
+  <li>Users must verify current prescribing information, contraindications, dosing adjustments, and local institutional protocols before making treatment decisions.</li>
+  <li>Any calculator output is a reference value only. Final treatment decisions remain the responsibility of the treating clinician.</li>
+  <li>Additional details may be provided in a separate medical disclaimer notice.</li>
+</ol>
+
+<h2>8. Prohibited Conduct</h2>
+<ol>
+  <li>Users must not:
+    <ul>
+      <li>copy, redistribute, sell, or republish service content without permission</li>
+      <li>reverse engineer, modify, decompile, or tamper with the service</li>
+      <li>misuse a subscription or share paid access improperly</li>
+      <li>infringe the intellectual property, privacy, or other rights of us or third parties</li>
+      <li>interfere with the operation, security, or availability of the service</li>
+      <li>use the service in violation of applicable law</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>9. Intellectual Property</h2>
+<ol>
+  <li>All rights in the text, images, logos, design, software, calculators, and other service content belong to us or the relevant rights holders.</li>
+  <li>Users may use the service for personal professional reference. Any broader reproduction, redistribution, or commercial use requires prior written permission.</li>
+</ol>
+
+<h2>10. Changes, Suspension, or Termination</h2>
+<ol>
+  <li>We may modify, add, remove, suspend, or discontinue any part of the service.</li>
+  <li>If continued service becomes impracticable, we may provide an appropriate remedy, which may include a prorated refund or a reasonable alternative at our discretion.</li>
+</ol>
+
+<h2>11. Limitation of Liability</h2>
+<ol>
+  <li>To the maximum extent permitted by law, we are not liable for losses arising from use of, or inability to use, the service, including indirect, incidental, consequential, special, or punitive damages.</li>
+  <li>If liability is imposed despite the above, the total amount recoverable from us is limited to the amount actually paid by the user for the service during the 12 months preceding the event giving rise to the claim.</li>
+</ol>
+
+<h2>12. Privacy</h2>
+<p>Personal information is handled in accordance with the separate Privacy Policy.</p>
+
+<h2>13. Changes to These Terms</h2>
+<ol>
+  <li>We may update these terms when reasonably necessary.</li>
+  <li>Updated terms may be posted in the service or on an associated website. Continued use after notice of updated terms constitutes acceptance of the revised terms.</li>
+</ol>
+
+<h2>14. Governing Law and Venue</h2>
+<ol>
+  <li>These terms are governed by the laws designated by the publisher in the applicable store listing, website notice, or accompanying legal documentation.</li>
+  <li>Any dispute related to the service will be handled in the court or venue specified in that accompanying legal notice, unless otherwise required by mandatory law.</li>
+</ol>
+
+<h2>15. Contact</h2>
+<div class="contact">
+  For questions about these terms or the service, please contact:<br>
+  Publisher: Satoshi Kutsuna<br>
+  Email: <a href="mailto:linezolid@mac.com">linezolid@mac.com</a>
+</div>
+
+<hr>
+<p style="text-align:center;color:var(--text-muted);font-size:0.8rem;">© 2026 Satoshi Kutsuna. All rights reserved.</p>
+
+</body>
+</html>
